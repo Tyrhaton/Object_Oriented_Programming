@@ -19,10 +19,19 @@
                         Console.Write("[?] Give Number: ");
                         MyStack.Push(int.Parse(Console.ReadLine()));
                     }
-                    catch
+                    catch (FormatException e)
                     {
-                        Console.WriteLine("[-] Invalid Input: Only Numbers should be put in.");
+                        Console.WriteLine("[-] " + e.Message);
                     }
+                    catch (SystemException e)
+                    {
+                        Console.WriteLine("[-] " + e.Message);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("[+] Continue...");
+                    }
+
                 }
                 else if (Commando == "Pop")
                 {
@@ -47,10 +56,18 @@
                         Console.Write("[?] Give Number: ");
                         MyStack.Search(int.Parse(Console.ReadLine()));
 
-                    }
-                    catch
+                    }                    
+                    catch (FormatException e)
                     {
-                        Console.WriteLine("[-] Invalid Input: Only Numbers should be put in.");
+                        Console.WriteLine("[-] " + e.Message);
+                    }
+                    catch (SystemException e)
+                    {
+                        Console.WriteLine("[-] " + e.Message);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("[+] Continue...");
                     }
                 }
                 else if (Commando == "PrintDate")
