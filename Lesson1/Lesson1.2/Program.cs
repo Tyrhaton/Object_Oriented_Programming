@@ -1,6 +1,4 @@
-﻿using les1opdr2;
-
-namespace Lesson1._2
+﻿namespace Lesson1._2
 {
     internal class Program
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace les1opdr2
+namespace Lesson1._2
 {
     internal class Stack
     {

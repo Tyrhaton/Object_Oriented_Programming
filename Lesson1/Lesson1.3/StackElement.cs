@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace les1opr3
+namespace Lesson1._3
 {
     internal class StackElement
     {

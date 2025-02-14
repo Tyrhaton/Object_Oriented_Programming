@@ -1,11 +1,10 @@
-﻿using les1opr3;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace les1opdr3
+namespace Lesson1._3
 {
     internal class Stack
     {
