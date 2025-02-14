@@ -10,11 +10,22 @@ namespace Lesson2._3
     {
         public int Data = 0;
         public StackElement Next = null;
+        private DateTime creationDate;
 
         public StackElement(int data, StackElement next)
         {
             this.Data = data;
             this.Next = next;
+            creationDate = DateTime.Now;
+        }
+        public void Print(DateTime date)
+        {
+            TimeSpan age = date - creationDate;
+            Console.WriteLine(date + " - " + age.ToString());
+            if (Next != null)
+            {
+                Next.Print(date);
+            }
         }
 
         public void Print()

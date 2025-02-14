@@ -14,8 +14,15 @@
                 Commando = Console.ReadLine();
                 if (Commando == "Push")
                 {
-                    Console.Write("[?] Give Number: ");
-                    MyStack.Push(int.Parse(Console.ReadLine()));
+                    try
+                    {
+                        Console.Write("[?] Give Number: ");
+                        MyStack.Push(int.Parse(Console.ReadLine()));
+                    }
+                    catch
+                    {
+                        Console.WriteLine("[-] Invalid Input: Only Numbers should be put in.");
+                    }
                 }
                 else if (Commando == "Pop")
                 {
@@ -31,12 +38,29 @@
                 }
                 else if (Commando == "Amount")
                 {
-                    Console.WriteLine(MyStack.Data + " elements");
+                    Console.WriteLine(MyStack.Data + " element(s)");
                 }
                 else if (Commando == "Search")
                 {
-                    Console.Write("[?] Give Number: ");
-                    MyStack.Search(int.Parse(Console.ReadLine()));
+                    try
+                    {
+                        Console.Write("[?] Give Number: ");
+                        MyStack.Search(int.Parse(Console.ReadLine()));
+
+                    }
+                    catch
+                    {
+                        Console.WriteLine("[-] Invalid Input: Only Numbers should be put in.");
+                    }
+                }
+                else if (Commando == "PrintDate")
+                {
+                    DateTime now = DateTime.Now;
+                    MyStack.Print(now);
+                }
+                else
+                {
+                    Console.WriteLine("[-] Invalid Command");
                 }
 
             }

@@ -19,6 +19,7 @@ namespace Lesson2._3
         public void Push(int number)
         {
             Top = new StackElement(number, Top);
+            Data++;
         }
 
         public int Pop()
@@ -27,6 +28,7 @@ namespace Lesson2._3
             {
                 int number = Top.Data;
                 Top = Top.Next;
+                Data--;
                 return number;
             }
             else
@@ -36,6 +38,10 @@ namespace Lesson2._3
             }
         }
 
+        public void Print(DateTime date)
+        {
+            Top.Print(date);
+        }
         public void Print()
         {
             Top.Print();
