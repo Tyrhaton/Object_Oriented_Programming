@@ -1,4 +1,4 @@
-﻿namespace Lesson3._2
+﻿namespace Lesson3._3
 {
     internal class Program
     {
@@ -33,19 +33,19 @@
                     }
 
                 }
-                //else if (Commando == "Pop")
-                //{
-                //    StackElement element = MyStack.Pop();
-                //    if(element != null)
-                //    {
-                //        Console.WriteLine("[+] Element Data: ");
-                //        element.Print();
-                //    }
-                //    else
-                //    {
-                //        Console.WriteLine("[-] Stack is Empty");
-                //    }
-                //}
+                else if (Commando == "Pop")
+                {
+                    StackElement element = MyStack.Pop();
+                    if(element != null)
+                    {
+                        Console.WriteLine("[+] Element Data: ");
+                        element.Print();
+                    }
+                    else
+                    {
+                        Console.WriteLine("[-] Stack is Empty");
+                    }
+                }
                 else if (Commando == "Print")
                 {
                     MyStack.Print();
@@ -58,27 +58,27 @@
                 {
                     Console.WriteLine(MyStack.Data + " element(s)");
                 }
-                //else if (Commando == "Search")
-                //{
-                //    try
-                //    {
-                //        Console.Write("[?] Give Number: ");
-                //        MyStack.Search(int.Parse(Console.ReadLine()));
+                else if (Commando == "Search")
+                {
+                    try
+                    {
+                        Console.Write("[?] Give Value: ");
+                        MyStack.Search(Console.ReadLine());
 
-                //    }                    
-                //    catch (FormatException e)
-                //    {
-                //        Console.WriteLine("[-] " + e.Message);
-                //    }
-                //    catch (SystemException e)
-                //    {
-                //        Console.WriteLine("[-] " + e.Message);
-                //    }
-                //    finally
-                //    {
-                //        Console.WriteLine("[+] Continue...");
-                //    }
-                //}
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("[-] " + e.Message);
+                    }
+                    catch (SystemException e)
+                    {
+                        Console.WriteLine("[-] " + e.Message);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("[+] Continue...");
+                    }
+                }
                 else if (Commando == "PrintDate")
                 {
                     DateTime now = DateTime.Now;
